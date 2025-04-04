@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jit Singha Mahapatra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3436;
+            line-height: 1.6;
+            background: url('ai-generated-8649644.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0);
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffffd0;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+
+
+        .typewriter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-section h2 {
+            color: #6c5ce7;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #6c5ce7, #a363d9);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-list li:hover {
+            transform: translateX(10px);
+        }
+
+        .contact-list i {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #6c5ce7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .contact-list li {
+                word-break: break-all;
+                white-space: normal;
+                padding: 1rem 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-list i {
+                margin-right: 0.5rem;
+            }
+
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="typewriter" id="typewriter-text"></div>
+        </div>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>I'm a passionate Computer Science student specializing in innovative solutions through technology.
+                Currently pursuing my B.Sc, I focus on full-stack development and problem-solving architectures.</p>
+            <p>My expertise spans modern web technologies, cloud computing, and UI/UX design. I thrive in transforming
+                complex challenges into elegant digital solutions.</p>
+        </section>
+
+        <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <ul class="contact-list">
+                <li>
+                    <i>📧</i>
+                    jitsinghamahapatra2006@gmail.com
+                </li>
+                <li>
+                    <i>📍</i>
+                    Bankipal, Tilabani, Simlapal, Bankura , West Bengal - 722160
+                </li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            © 2025 Jit Singha Mahapatra | Crafting Digital Excellence
+        </footer>
+    </div>
+
+    <script>
+        const text = "Jit Singha Mahapatra";
+        const element = document.getElementById("typewriter-text");
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                element.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150);
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+
+</body>
+
+</html>

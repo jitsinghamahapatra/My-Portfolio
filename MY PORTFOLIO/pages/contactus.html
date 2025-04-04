@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jit Singha Mahapatra</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('envelopes-6919301.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #009FFD, #2A2A72);
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 12px 12px 0 0;
+            letter-spacing: 1px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .contact-details {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .contact-details p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            margin: 6px 0;
+        }
+
+        .contact-details i {
+            color: #009FFD;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            margin-top: 15px;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            color: #4682e2;
+            font-size: 18px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-bottom: 2px solid #00E1FF;
+            font-size: 14px;
+            background: transparent;
+            color: black;
+            transition: 0.3s ease-in-out;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-bottom: 2px solid #FFD700;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .contact-form label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: #04d5ff;
+            color: black;
+            font-weight: bold;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #00e1ffb1;
+            transform: scale(1.03);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #444;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .header {
+                font-size: 20px;
+                padding: 12px;
+            }
+
+            .contact-details {
+                font-size: 13px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            Your Enquiry
+        </div>
+
+        <div class="contact-details">
+            <p><i>📍</i> Address: Bankipal, Tilabani, Simlapal, Bankura, West Bengal, India - 722160</p>
+            <p><i>📧</i> Email: jitsinghamahapatra2006@gmail.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required autocomplete="off">
+                <input type="email" name="email" placeholder="Your Email" required autocomplete="off">
+
+                <label for="image">Upload Image (Optional)</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Jit Singha Mahapatra. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let fileInput = document.getElementById("image");
+            let file = fileInput.files[0];
+
+            if (file) {
+                let allowedTypes = ["image/png", "image/jpeg"];
+                if (!allowedTypes.includes(file.type)) {
+                    alert("Only JPG and PNG images are allowed.");
+                    return;
+                }
+
+                if (file.size > 2 * 1024 * 1024) {
+                    alert("File size must be under 2MB.");
+                    return;
+                }
+            }
+
+            alert("Your message has been sent successfully!");
+        });
+    </script>
+
+</body>
+
+</html>

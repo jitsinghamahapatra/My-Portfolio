@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('pen-4969580.jpg') no-repeat center center/cover;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ffd9;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 12px;
+            width: 260px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid white;
+        }
+
+        a {
+            margin-top: 12px;
+            text-decoration: none;
+            background: #0033ff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+
+        a:hover {
+            background: #0006b1;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1><i>My projects</i></h1>
+
+    <div class="project-container">
+        <div class="project">
+            <p>Login Page</p>
+            <img src="/projects files/loginpage.png" alt="Login Page">
+            <a href="/projects files/LOGIN-PAGE.zip" download>Download</a>
+        </div>
+
+        <div class="project">
+            <p>Clothing Store</p>
+            <img src="/projects files/zenvy.png" alt="Clothing">
+            <a href="/projects files/ZENVY.zip" download>Download</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
