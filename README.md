@@ -12,7 +12,7 @@ Click Extract All (Windows) or use a ZIP extractor on macOS/Linux.
 # 3. Open Project in VS Code
 Open Visual Studio Code.
 Click File > Open Folder...
-Select the extracted folder (My Portfolio)
+Select the extracted folder 
 
 # 4. Run the Website
 In the Explorer, find index.html.
